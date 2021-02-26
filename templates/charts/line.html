@@ -1,0 +1,53 @@
+<div id="competition-line-[[id]]" style="min-width: 250px; height: 400px; margin: 0 auto;"></div>
+
+<script type="text/javascript">
+    var g_obj_Competition_Chart_Line_[[id]] = null;
+    jQuery(function() {
+        g_obj_Competition_Chart_Line_[[id]] = new Highcharts.Chart({
+            chart: {
+                renderTo: 'competition-line-[[id]]',
+                type: 'line'
+            },
+            title: {
+                text: '[[title]]'
+            },
+            subtitle: {
+                text: '[[sub-title]]'
+            },
+            plotOptions: {
+                line: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                minRange: 7 * 24 * 3600 * 1000
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '[[label-y-axis]]'
+                },
+                plotLines: [
+                    {
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }
+                ]
+            },
+            tooltip: {
+                valueSuffix: ' [[suffix]]'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: []
+        });
+    });
+</script>

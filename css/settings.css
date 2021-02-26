@@ -1,0 +1,40 @@
+/**
+ * Created by Stefan Herndler.
+ * User: she
+ * Date: 13.08.14 09:34
+ * Version: 1.0.0
+ * Since: 0.0.1
+ */
+
+
+input[type=text], input[type=password], textarea, select {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    width: 80% !important;
+}
+
+textarea {
+    height: 250px;
+}
+
+label {
+    display: inline-block;
+}
+
+.postbox > h3 {
+    height: 32px !important;
+    line-height: 32px !important;
+}
+
+.postbox > h3 > span {
+    padding-left: 10px;
+}
+
+.postbox > .inside > table {
+    border: none !important;
+}
+
+.postbox > .inside >table > tbody > tr > td:first-child {
+    width: 15% !important;
+    font-weight: bold !important;
+}

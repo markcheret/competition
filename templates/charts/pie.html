@@ -1,0 +1,41 @@
+<div id="competition-pie-[[id]]" style="min-width: 250px; height: 400px; margin: 0 auto;"></div>
+
+<script type="text/javascript">
+    var g_obj_Competition_Chart_Pie_[[id]] = null;
+    jQuery(function() {
+        g_obj_Competition_Chart_Pie_[[id]] = new Highcharts.Chart({
+            chart: {
+                renderTo: 'competition-pie-[[id]]',
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title: {
+                text: '[[title]]'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y} - {point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '[[title]]',
+                data: []
+            }]
+        });
+    });
+</script>
